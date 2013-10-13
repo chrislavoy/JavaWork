@@ -1,0 +1,8 @@
+import javax.swing.JPanel;
+import java.awt.*;
+import java.awt.event.*;
+
+public class CoordinatesPanel extends JPanel
+{
+
+}

@@ -1,0 +1,19 @@
+import javax.swing.JPanel;
+
+import java.awt.*;
+import java.awt.event.*;
+
+public class CoordinatesPanel extends JPanel
+{
+	private final int SIZE = 6;		//diameter of the dot
+	private int x = 50, y = 50;		//coordinates of mouse press
+	
+	//constructor, sets up this panel to listen for mouse events.
+	public CoordinatesPanel()
+	{
+		addMouseListener (new CoordinatesListener());
+		
+		setBackground (Color.black);
+		setPreferredSize (new Dimension(300,200));
+	}
+}

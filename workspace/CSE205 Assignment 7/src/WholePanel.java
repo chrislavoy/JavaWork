@@ -81,11 +81,13 @@ public class WholePanel extends JPanel
 //    	 circleList.add(circle);
 //		 repaint();
          
+         page.drawOval(x1, y1, 4, 4);
+    	 page.drawOval(x1, y1, x2, y2);
+         
          for(int i = 0; i < circleList.size(); i++)
          {
-        	 page.drawOval(x1, y1, 2, 2);
-        	 page.drawOval(x1, y1, x2, y2);
-        	 
+        	 page.setColor(currentColor);
+        	 page.fillOval(x1, y1, diameter, diameter);
          }
          
          
@@ -135,12 +137,14 @@ public class WholePanel extends JPanel
 		{
 			if (event.getSource() == erase)
 			{
-				
+				circleList.clear();
+				repaint();
 			}
 			
 			if (event.getSource() == undo)
 			{
-				
+				circleList.remove(circleList.size()-1);
+				repaint();
 			}
 		}
     }//end of ButtonListener
