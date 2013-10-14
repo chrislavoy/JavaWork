@@ -40,6 +40,13 @@ public class CoordinatesPanel extends JPanel
 			repaint();
 		}
 		
+		public void mouseDragged (MouseEvent event)
+		{
+			x = event.getX();
+			y = event.getY();
+			repaint();
+		}
+		
 		//provide empty definitions for unused event methods
 		public void mouseClicked (MouseEvent e) {}
 		public void mouseReleased (MouseEvent e) {}

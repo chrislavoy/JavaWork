@@ -75,6 +75,7 @@ public class WholePanel extends JPanel
 
         //to be filled
          addMouseListener (new PointListener());
+         addMouseMotionListener (new PointListener());
          
 //    	 Circle circle = new Circle(globalX, globalY, diameter, currentColor);
 //    	 circle.draw(page);
@@ -82,12 +83,12 @@ public class WholePanel extends JPanel
 //		 repaint();
          
          page.drawOval(x1, y1, 4, 4);
-    	 page.drawOval(x1, y1, x2, y2);
+    	 page.drawOval(x1 - (diameter/2), y1 - (diameter/2), diameter, diameter);
          
          for(int i = 0; i < circleList.size(); i++)
          {
         	 page.setColor(currentColor);
-        	 page.fillOval(x1, y1, diameter, diameter);
+        	 page.fillOval(x1 - (diameter/2), y1 - (diameter/2), diameter, diameter);
          }
          
          
@@ -125,6 +126,10 @@ public class WholePanel extends JPanel
                         //needs to be filled
                 	 x2 = event.getX();
                 	 y2 = event.getY();
+                	 
+                	 int radius = (int)Math.sqrt(Math.pow((double)(x2-x1), 2) + Math.pow((double)(y2-y1), 2));
+                	 diameter = 2 * radius;
+                	 
                 	 repaint();
                    }
                  public void mouseMoved(MouseEvent event) {}
