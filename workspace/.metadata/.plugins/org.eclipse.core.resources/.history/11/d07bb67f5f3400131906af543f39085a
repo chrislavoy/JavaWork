@@ -1,9 +1,0 @@
-import javax.swing.JPanel;
-import java.awt.*;
-import java.awt.event.*;
-
-public class CoordinatesPanel extends JPanel
-{
-	private final int SIZE = 6;		//diameter of the dot
-	private int x = 50, y = 50;
-}

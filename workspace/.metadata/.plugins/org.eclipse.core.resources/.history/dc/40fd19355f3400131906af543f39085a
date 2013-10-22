@@ -1,9 +1,0 @@
-//*********************
-// Testing mouse events
-//*********************
-
-import javax.swing.JFrame;
-
-public class Coordinates {
-
-}
