@@ -1,3 +1,5 @@
+import java.io.Serializable;
+
 // Assignment #: 8
 //         Name: Chris LaVoy
 //    StudentID: 1201806935
@@ -5,7 +7,7 @@
 //  Description:The Address class describes city and state of a bank.
 //  It will be used as an aggregate object of the Bank class. It has following attributes:
 
-public class Address
+public class Address implements Comparable, Serializable
  {
    // instance variables
    private String city;
@@ -67,4 +69,31 @@ public class Address
       return result;
     }
 
+@Override
+	public int compareTo(Object o) {
+		// TODO Auto-generated method stub
+		if (state.length() < o.toString().length())
+		{
+			return -1;
+		}
+		else if (state.length() > o.toString().length())
+		{
+			return 1;
+		}
+		else
+		{
+			if (city.length() > o.toString().length())
+			{
+				return 1;
+			}
+			if (city.length() < o.toString().length())
+			{
+				return -1;	
+			}
+			else
+			{
+				return 0;
+			}
+		}
+	}
 }

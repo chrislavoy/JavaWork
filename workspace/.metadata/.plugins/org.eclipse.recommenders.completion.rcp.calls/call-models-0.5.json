@@ -9,5 +9,15 @@
     "location": "D:\\Program Files\\Java\\jre7\\lib\\rt.jar",
     "status": "RESOLVED",
     "error": "No class path info available for \u0027D:\\Program Files\\Java\\jre7\\lib\\rt.jar\u0027. Skipped."
+  },
+  "C:\\Users\\chris_000\\Documents\\GitHub\\JavaWork\\workspace\\CSE205 Assignment 8\\src": {
+    "location": "C:\\Users\\chris_000\\Documents\\GitHub\\JavaWork\\workspace\\CSE205 Assignment 8\\src",
+    "status": "UNRESOLVED",
+    "error": "No class path info available for \u0027C:\\Users\\chris_000\\Documents\\GitHub\\JavaWork\\workspace\\CSE205 Assignment 8\\src\u0027. Skipped."
+  },
+  "C:\\Users\\chris_000\\Documents\\GitHub\\JavaWork\\workspace\\CSE205 Assignment 10\\src": {
+    "location": "C:\\Users\\chris_000\\Documents\\GitHub\\JavaWork\\workspace\\CSE205 Assignment 10\\src",
+    "status": "UNRESOLVED",
+    "error": "No class path info available for \u0027C:\\Users\\chris_000\\Documents\\GitHub\\JavaWork\\workspace\\CSE205 Assignment 10\\src\u0027. Skipped."
   }
 }

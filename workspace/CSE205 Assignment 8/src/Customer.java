@@ -6,9 +6,10 @@
 //  attributes first name, last name, customer ID, and cash amount.
 //  It also contains the accessors and the modifiers of each attribute.
 
+import java.io.Serializable;
 import java.text.*;
 
-public class Customer
+public class Customer implements Comparable, Serializable
  {
   private String firstName;
   private String lastName;
@@ -84,6 +85,34 @@ public class Customer
 
     return customerString;
    }
+
+  @Override
+	public int compareTo(Object arg0) {
+		// TODO Auto-generated method stub
+	  if(lastName.length() > arg0.toString().length())
+	  {
+		  return 1;
+	  }
+	  else if(lastName.length() < arg0.toString().length())
+	  {
+		  return -1;
+	  }
+	  else
+	  {
+		  if(firstName.length() > arg0.toString().length())
+		  {
+			  return 1;
+		  }
+		  else if(firstName.length() < arg0.toString().length())
+		  {
+			  return -1;
+		  }
+		  else
+		  {
+			  return 0;
+		  }
+	  }
+	}
 
 } // end of Customer class
 

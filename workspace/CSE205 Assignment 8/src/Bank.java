@@ -1,3 +1,5 @@
+import java.io.Serializable;
+
 // Assignment #: 8
 //         Name: Chris LaVoy
 //    StudentID: 1201806935
@@ -5,7 +7,7 @@
 //  Description: It represents a bank account. The class Bank contains information about a bank that
 //  a customer can have an account with.
 
-public class Bank
+public class Bank implements Comparable, Serializable
  {
   // instance variables
   private String bankName;
@@ -89,4 +91,43 @@ public class Bank
 
     return result;
    }
+
+@Override
+	public int compareTo(Object o) {
+		// TODO Auto-generated method stub
+		if (bankName.length() < o.toString().length())
+		{
+			return -1;
+		}
+		else if(bankName.length() > o.toString().length())
+		{
+			return 1;
+		}
+		else
+		{
+			if (bankID < o.toString().length())
+			{
+				return -1;
+			}
+			else if (bankID > o.toString().length())
+			{
+				return 1;
+			}
+			else
+			{
+				if (bankAddress.compareTo(o) > 0)
+				{
+					return 1;
+				}
+				else if (bankAddress.compareTo(o) < 0)
+				{
+					return -1;
+				}
+				else
+				{
+					return 0;
+				}
+			}
+		}
+	}
 }
